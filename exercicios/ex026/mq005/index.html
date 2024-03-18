@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href=" estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudoutamanho()">
+    <header>
+       <h1>Meu site</h1>
+       <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+        <ul>
+            <li><a href="#">opção 1</a></li>
+            <li><a href="#">opção 2</a></li>
+            <li><a href="#">opção 3</a></li>
+            <li><a href="#">opção 4</a></li>
+            <li><a href="#">opção 5</a></li>
+        </ul>
+       </menu>
+    </header>
+    <main>
+        <article>
+           <h2>Testando Media Query</h2>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptate, beatae cupiditate, natus temporibus adipisci recusandae sunt expedita corporis sit sed id? Ullam explicabo voluptas quia doloribus sequi ut blanditiis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti rem sed ducimus cumque veniam iste aspernatur. Dolorem quos similique eum eius facere suscipit at, alias cupiditate itaque, eos, necessitatibus nam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quae fuga accusamus ea quidem nihil tenetur mollitia ab odit veniam, alias, neque inventore at molestias laboriosam unde, a ipsam rem.</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione cumque nam iste corrupti est quae, ab et tenetur nesciunt, officiis amet, molestias neque ducimus similique nostrum! Eveniet culpa repellendus dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro modi culpa soluta non, dolorum aperiam obcaecati eaque deserunt a hic voluptates, corrupti at mollitia? Consectetur iure deserunt eveniet quas dolor! </p>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat labore, minus ducimus sapiente quae iure expedita perspiciatis excepturi eos inventore totam ea sit rem, deleniti, doloremque error autem hic! Autem!</p>
+        </article>
+    </main>
+    <script>
+        
+        function mudoutamanho() {
+             if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+              } else {
+                itens.style.display = 'none'
+              }
+        }
+
+        function clickMenu() {
+           if (itens.style.display == 'block') {
+               itens.style.display = 'none'
+           } else {
+               itens.style.display = 'block'
+           }
+        }
+    </script>
+</body>
+</html>
